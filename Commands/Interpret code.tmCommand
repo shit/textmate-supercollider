@@ -16,6 +16,7 @@ else
 	cmd = currentline
 end
 
+cmd = "(#{cmd}).postln;"
 cmd = cmd.gsub('"', '\"');
 
 %x{ echo "#{cmd}" &gt; ~/sclang/scpipe; }

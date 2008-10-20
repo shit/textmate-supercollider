@@ -14,7 +14,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(if|while|for|return)\b</string>
+			<string>\b(if|do|for|^|var|this|true|false)\b</string>
 			<key>name</key>
 			<string>keyword.control.untitled</string>
 		</dict>
@@ -34,6 +34,30 @@
 					<string>constant.character.escape.untitled</string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\\[a-zA-Z]+</string>
+			<key>name</key>
+			<string>meta.source.embedded.bound</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\|[a-zA-Z[[:space:]]\,]+\|</string>
+			<key>name</key>
+			<string>entity.name.tag</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[[:space:]]+[a-z]{1}[a-zA-Z0-9_]+ {</string>
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\/\/.*</string>
+			<key>name</key>
+			<string>comment</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
