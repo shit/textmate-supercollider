@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># grep -inr "Interpreter {" SCClassLibrary | egrep -o "[0-9]{1,5}"
+
+
+cd ~/sclang/Help; cat `find . -name $TM_SELECTED_TEXT.html`;
+cat &lt;&lt; 'EOF'
+&lt;![CDATA[
+&lt;script&gt;
+var links = Textmate.document.getElementsByTagName("a");
+for(int i=0; i &lt; links.length; i++) {
+	links[i].style.backgroundColor = "red";
+}
+&lt;/script&gt;
+EOF</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@d</string>
+	<key>name</key>
+	<string>Help</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>uuid</key>
+	<string>EAC732CB-6B38-4E0A-9BD4-D377562331D9</string>
+</dict>
+</plist>

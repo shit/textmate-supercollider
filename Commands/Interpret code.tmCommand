@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/local/bin/ruby
+
+selected = ENV['TM_SELECTED_TEXT'];
+currentline = ENV['TM_CURRENT_LINE'];
+
+if selected
+	cmd = selected
+else
+	cmd = currentline
+end
+
+cmd = cmd.gsub('"', '\"');
+
+%x{ echo "#{cmd}" &gt; ~/sclang/scpipe; }
+%x{ echo $'\e\x04' &gt; ~/sclang/scpipe; }
+
+
+# just to remind you of some useful environment variables
+# see Help / Environment Variables for the full list
+#echo File: "$TM_FILEPATH"
+#echo Word: "$TM_CURRENT_WORD"
+#echo Selection: "$TM_SELECTED_TEXT"
+
+
+</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Interpret code</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>uuid</key>
+	<string>D04C327A-45D3-427B-98C5-D0DE138CA1E8</string>
+</dict>
+</plist>

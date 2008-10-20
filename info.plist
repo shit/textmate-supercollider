@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>SuperCollider-dev</string>
+	<key>ordering</key>
+	<array>
+		<string>EAC732CB-6B38-4E0A-9BD4-D377562331D9</string>
+		<string>2B284C23-9227-4362-9EDF-13D54BB56697</string>
+		<string>D04C327A-45D3-427B-98C5-D0DE138CA1E8</string>
+		<string>81F7F82A-5C77-463E-BE36-15E0DAFF9930</string>
+		<string>F63E530D-4C84-4C66-9EAA-6FC504FA4587</string>
+	</array>
+	<key>uuid</key>
+	<string>7613A472-3FAB-454C-8CF2-2E62F0D00920</string>
+</dict>
+</plist>
