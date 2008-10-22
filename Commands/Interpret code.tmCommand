@@ -16,19 +16,14 @@ else
 	cmd = currentline
 end
 
+if cmd.match(/\/\//)
+	cmd = cmd.match(/(.*)\/\/.*/)[1]   # remove comments
+end
 cmd = "(#{cmd}).postln;"
 cmd = cmd.gsub('"', '\"');
 
 %x{ echo "#{cmd}" &gt; ~/sclang/scpipe; }
 %x{ echo $'\e\x04' &gt; ~/sclang/scpipe; }
-
-
-# just to remind you of some useful environment variables
-# see Help / Environment Variables for the full list
-#echo File: "$TM_FILEPATH"
-#echo Word: "$TM_CURRENT_WORD"
-#echo Selection: "$TM_SELECTED_TEXT"
-
 
 </string>
 	<key>fallbackInput</key>

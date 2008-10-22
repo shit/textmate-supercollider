@@ -5,23 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># grep -inr "Interpreter {" SCClassLibrary | egrep -o "[0-9]{1,5}"
-
-
-cat `find ~/sclang/Help -name $TM_SELECTED_TEXT.html`;
+	<string>%x{ echo "Help.gui;\e\x04" &gt; ~/sclang/scpipe; }
 
 </string>
-	<key>fallbackInput</key>
-	<string>word</string>
 	<key>input</key>
-	<string>selection</string>
+	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@d</string>
+	<string>@D</string>
 	<key>name</key>
-	<string>Help</string>
+	<string>Help GUI</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>discard</string>
 	<key>uuid</key>
-	<string>EAC732CB-6B38-4E0A-9BD4-D377562331D9</string>
+	<string>E302F342-45F1-4B15-820A-289CEF92AB84</string>
 </dict>
 </plist>

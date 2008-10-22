@@ -5,23 +5,17 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># grep -inr "Interpreter {" SCClassLibrary | egrep -o "[0-9]{1,5}"
-
-
-cat `find ~/sclang/Help -name $TM_SELECTED_TEXT.html`;
-
+	<string>kill -HUP `cat /tmp/sclangpipe_app-pid`
 </string>
-	<key>fallbackInput</key>
-	<string>word</string>
 	<key>input</key>
-	<string>selection</string>
+	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@d</string>
+	<string>@k</string>
 	<key>name</key>
-	<string>Help</string>
+	<string>Restart</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>discard</string>
 	<key>uuid</key>
-	<string>EAC732CB-6B38-4E0A-9BD4-D377562331D9</string>
+	<string>0EE79AEB-E9A7-4ABE-98A0-6CDBF3F3777A</string>
 </dict>
 </plist>
