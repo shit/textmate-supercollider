@@ -16,15 +16,10 @@ else
 	cmd = currentline
 end
 
-if cmd.match(/\/\//)
-	cmd = cmd.match(/(.*)\/\/.*/)[1]   # remove comments
-end
 cmd = "(#{cmd}).postln;"
 cmd = cmd.gsub('"', '\"');
-
 %x{ echo "#{cmd}" &gt; ~/sclang/scpipe; }
 %x{ echo $'\e\x04' &gt; ~/sclang/scpipe; }
-
 </string>
 	<key>fallbackInput</key>
 	<string>line</string>

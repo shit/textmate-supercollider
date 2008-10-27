@@ -5,14 +5,13 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>kill -HUP `cat /tmp/sclangpipe_app-pid`
-</string>
+	<string>ruby ~/sclang/server.rb &amp;&gt;/dev/null &amp;</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>@k</string>
 	<key>name</key>
-	<string>Restart</string>
+	<string>Recompile class library</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>uuid</key>
