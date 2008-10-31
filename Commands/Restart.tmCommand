@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>ruby ~/sclang/server.rb &amp;&gt;/dev/null &amp;</string>
+	<string>#ruby ~/sclang/server.rb &amp;&gt;/dev/null &amp;</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>

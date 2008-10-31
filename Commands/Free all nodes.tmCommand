@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/local/bin/ruby
+	<string>#!/usr/bin/env ruby
 
 `echo "if(Server.local.serverRunning, { Server.local.freeAll });\e\x04" &gt; ~/sclang/scpipe;`
 `echo "if(Server.internal.serverRunning, { Server.internal.freeAll });\e\x04" &gt; ~/sclang/scpipe;`

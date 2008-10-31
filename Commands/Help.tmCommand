@@ -5,11 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># grep -inr "Interpreter {" SCClassLibrary | egrep -o "[0-9]{1,5}"
-
-
-cat `find ~/sclang/Help -name $TM_SELECTED_TEXT.html`;
-
+	<string>cat `find ~/sclang/Help -name $TM_SELECTED_TEXT.html`;
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>
