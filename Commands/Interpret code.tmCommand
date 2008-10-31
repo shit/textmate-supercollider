@@ -23,7 +23,7 @@ cmd = cmd.gsub('`', '\`');
 cmd = cmd.strip
 
 if cmd.size &gt; 0
-	%x{ echo "#{cmd}.postln;" &gt; ~/sclang/scpipe; }
+	%x{ echo "(#{cmd}).postln;" &gt; ~/sclang/scpipe; }
 	%x{ echo $'\e\x04' &gt; ~/sclang/scpipe; }
 end
 </string>
