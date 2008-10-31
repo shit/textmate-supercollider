@@ -20,9 +20,12 @@ end
 cmd = cmd.gsub('"', '\"');
 cmd = cmd.gsub("'", "\'");
 cmd = cmd.gsub('`', '\`');
+cmd = cmd.strip
 
-%x{ echo "#{cmd.strip).postln;" &gt; ~/sclang/scpipe; }
-%x{ echo $'\e\x04' &gt; ~/sclang/scpipe; }
+if cmd.size &gt; 0
+	%x{ echo "#{cmd}.postln;" &gt; ~/sclang/scpipe; }
+	%x{ echo $'\e\x04' &gt; ~/sclang/scpipe; }
+end
 </string>
 	<key>fallbackInput</key>
 	<string>line</string>
