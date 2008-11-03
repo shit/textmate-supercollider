@@ -18,7 +18,7 @@ Installation
 ============
 
 cd ~/Library/Application\ Support/TextMate/Bundles/
-git clone git://github.com/rfwatson/textmate-supercollider.git SuperCollider
+git clone git://github.com/rfwatson/textmate-supercollider.git SuperCollider.tmbundle
 defaults write /Applications/SuperCollider/SuperCollider.app/Contents/Info NSAppleScriptEnabled -bool YES
 
 The final command enables basic AppleScript functionality in SuperCollider, and is required.
