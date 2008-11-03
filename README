@@ -3,6 +3,8 @@ SuperCollider/TextMate bundle
 
 Contained is a simple SuperCollider.app bundle for TextMate. The bundle utilizes OSX's AppleScript to automate basic SC functionality, such as executing code, stopping playback and recompiling the class library, all using standard keyboard shortcuts, and all from within TextMate.
 
+This bundle is still in development/beta phase, please report any problems or comments.
+
 
 Prerequisites
 =============
@@ -54,11 +56,12 @@ TODO
 - Tidy up syntax highlighting, is somewhat messy at the moment
 - Enable searching of help files/class defs from within TextMate
 - Clean up AppleScript/menu_click function
-- ???
+- Some strange menu rendering problems when switching between apps??
+- ??????
 
 
 CONTACT
 =======
 
-Please contact me via github:
+Contact me via github:
 http://github.com/rfwatson
