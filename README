@@ -50,6 +50,12 @@ LIMITATIONS
 Selecting a word and searching the help file, or class definition, for it is not yet implemented. For the meantime, I find the quickest way to access these files is to copy them somewhere in your home directory, and then use Spotlight to search for them (shortcut: CMD-spacebar).
 
 
+CREDITS
+=======
+
+Jacob Rus's menu_click functions: http://pastie.org/14358
+
+
 TODO
 ====
 
