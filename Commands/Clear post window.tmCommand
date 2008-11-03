@@ -7,7 +7,8 @@
 	<key>command</key>
 	<string>osascript &lt;&lt; END
 tell application "SuperCollider" to activate
-menu_click({"SuperCollider", "Help", "SuperCollider Help Browser"})
+menu_click({"SuperCollider", "Window", "Clear Post Window"})
+tell application "TextMate" to activate
 
 -- `menu_click`, by Jacob Rus, September 2006
 on menu_click(mList)
@@ -46,12 +47,12 @@ END</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@D</string>
+	<string>@C</string>
 	<key>name</key>
-	<string>Help GUI</string>
+	<string>Clear post window</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>uuid</key>
-	<string>E302F342-45F1-4B15-820A-289CEF92AB84</string>
+	<string>264ACF44-52AC-4AD4-8C13-0F49E0DAAA12</string>
 </dict>
 </plist>

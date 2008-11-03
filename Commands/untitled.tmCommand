@@ -7,7 +7,7 @@
 	<key>command</key>
 	<string>osascript &lt;&lt; END
 tell application "SuperCollider" to activate
-menu_click({"SuperCollider", "Help", "SuperCollider Help Browser"})
+menu_click({"SuperCollider", "Window", "Post Window To Front"})
 
 -- `menu_click`, by Jacob Rus, September 2006
 on menu_click(mList)
@@ -46,12 +46,12 @@ END</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@D</string>
+	<string>@?</string>
 	<key>name</key>
-	<string>Help GUI</string>
+	<string>Post window to front</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>uuid</key>
-	<string>E302F342-45F1-4B15-820A-289CEF92AB84</string>
+	<string>81E4BC21-07E5-4E61-B5C8-3CC5B527C8CE</string>
 </dict>
 </plist>

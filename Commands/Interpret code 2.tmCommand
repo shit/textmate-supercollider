@@ -5,10 +5,9 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>osascript &lt;&lt; END
-tell application "SuperCollider" to activate
-menu_click({"SuperCollider", "Help", "SuperCollider Help Browser"})
+	<string>#!/usr/bin/env ruby
 
+menuscript = %q{
 -- `menu_click`, by Jacob Rus, September 2006
 on menu_click(mList)
 	local appName, topMenu, r
@@ -42,16 +41,43 @@ on menu_click_recurse(mList, parentObject)
 		end if
 	end tell
 end menu_click_recurse
-END</string>
+}
+
+selected = ENV['TM_SELECTED_TEXT'];
+currentline = ENV['TM_CURRENT_LINE'];
+
+if selected
+	%x{
+		osascript &lt;&lt; END
+		tell application "TextMate" to activate
+		menu_click({"TextMate", "TextMate", "Services", "Execute in SuperCollider..."})
+		tell application "TextMate" to activate
+		#{menuscript}
+		END
+	}
+else
+	%x{
+		osascript &lt;&lt; END
+		tell application "TextMate" to activate
+		menu_click({"TextMate", "Edit", "Select", "Line"})
+		menu_click({"TextMate", "TextMate", "Services", "Execute in SuperCollider..."})
+		tell application "TextMate" to activate
+		#{menuscript}
+		END
+	}
+end
+</string>
+	<key>fallbackInput</key>
+	<string>line</string>
 	<key>input</key>
-	<string>none</string>
+	<string>selection</string>
 	<key>keyEquivalent</key>
-	<string>@D</string>
+	<string></string>
 	<key>name</key>
-	<string>Help GUI</string>
+	<string>Interpret</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>uuid</key>
-	<string>E302F342-45F1-4B15-820A-289CEF92AB84</string>
+	<string>FB64DE22-E1F3-48CC-AE67-21B7E008ADD5</string>
 </dict>
 </plist>
