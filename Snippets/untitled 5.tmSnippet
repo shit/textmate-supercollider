@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>^super.new.init($0);</string>
+	<string>^super.new.init$0;</string>
 	<key>name</key>
 	<string>^super.new.init</string>
 	<key>tabTrigger</key>
