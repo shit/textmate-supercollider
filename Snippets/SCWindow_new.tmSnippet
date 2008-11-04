@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.openHelpFile</string>
+	<string>SCWindow("${1:window title}", Rect(${2:x}, ${3:y}, ${4:width}, ${5:height}));</string>
 	<key>name</key>
-	<string>.openHelpFile</string>
+	<string>SCWindow.new</string>
 	<key>tabTrigger</key>
-	<string>.h</string>
+	<string>swin</string>
 	<key>uuid</key>
-	<string>8FA2A21C-E1C9-41AE-AEAB-7FF573747A7C</string>
+	<string>C5F4C24C-AFE2-4B63-A925-7DA638E8BE1A</string>
 </dict>
 </plist>

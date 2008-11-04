@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>s.queryAllNodes;</string>
+	<string>s.queryAllNodes</string>
 	<key>name</key>
 	<string>s.queryAllNodes</string>
 	<key>tabTrigger</key>
