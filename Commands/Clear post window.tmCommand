@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>osascript &lt;&lt; END
+	<string>osascript &lt;&lt; ENDOSA
 tell application "SuperCollider" to activate
 menu_click({"SuperCollider", "Window", "Clear Post Window"})
 tell application "TextMate" to activate
@@ -43,7 +43,7 @@ on menu_click_recurse(mList, parentObject)
 		end if
 	end tell
 end menu_click_recurse
-END</string>
+ENDOSA</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>

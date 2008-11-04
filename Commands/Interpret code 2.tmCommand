@@ -48,22 +48,22 @@ currentline = ENV['TM_CURRENT_LINE'];
 
 if selected
 	%x{
-		osascript &lt;&lt; END
+		osascript &lt;&lt; ENDOSA
 		tell application "TextMate" to activate
 		menu_click({"TextMate", "TextMate", "Services", "Execute in SuperCollider..."})
 		tell application "TextMate" to activate
 		#{menuscript}
-		END
+		ENDOSA
 	}
 else
 	%x{
-		osascript &lt;&lt; END
+		osascript &lt;&lt; ENDOSA
 		tell application "TextMate" to activate
 		menu_click({"TextMate", "Edit", "Select", "Line"})
 		menu_click({"TextMate", "TextMate", "Services", "Execute in SuperCollider..."})
 		tell application "TextMate" to activate
 		#{menuscript}
-		END
+		ENDOSA
 	}
 end
 </string>

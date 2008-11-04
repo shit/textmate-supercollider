@@ -75,10 +75,21 @@
 			<string>entity.name.tag</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>[[:space:]]+\**([a-z]{1}[a-zA-Z0-9_]+)[ _]+{</string>
+			<key>begin</key>
+			<string>[[:space:]]+</string>
+			<key>end</key>
+			<string>\{</string>
 			<key>name</key>
-			<string>entity.name.function</string>
+			<string></string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\**([a-z]{1}[a-zA-Z0-9_]+)[ _]+</string>
+					<key>name</key>
+					<string>entity.name.function</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>match</key>
