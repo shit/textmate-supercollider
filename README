@@ -1,7 +1,7 @@
 SuperCollider/TextMate bundle
 =============================
 
-Contained is a simple SuperCollider.app bundle for TextMate. The bundle utilizes OSX's AppleScript to automate basic SC functionality, such as executing code, stopping playback and recompiling the class library, all using standard keyboard shortcuts, and all from within TextMate.
+Contained is a SuperCollider bundle for TextMate. The bundle utilizes OSX's AppleScript to automate basic SC functionality, such as executing code, stopping playback and recompiling the class library, all using standard keyboard shortcuts, and all from within TextMate.
 
 This bundle is still in development/beta phase, please report any problems or comments.
 
@@ -22,13 +22,13 @@ git clone git://github.com/rfwatson/textmate-supercollider.git SuperCollider.tmb
 defaults write /Applications/SuperCollider/SuperCollider.app/Contents/Info NSAppleScriptEnabled -bool YES
 
 The final command enables basic AppleScript functionality in SuperCollider, and is required.
-You may need to adapt the above commands to match your filesystem paths.
+You may need to adapt the above commands to match your paths to TextMate Bundles/, and SuperCollider.app. 
 
 
 Usage
 =====
 
-1) Open a .sc file in TextMate. (TextMate does not handle .rtf files, so you'll have to save your files as a "class", with a .sc extension). Ensure 'SuperCollider' bundle is selected (see lower edge of window).
+1) Launch TextMate. Open a .sc file. Ensure SuperCollider bundle is selected.
 
 2) Launch SuperCollider.app.
 
@@ -48,6 +48,8 @@ LIMITATIONS
 ===========
 
 Selecting a word and searching the help file, or class definition, for it is not yet implemented. For the meantime, I find the quickest way to access these files is to copy them somewhere in your home directory, and then use Spotlight to search for them (shortcut: CMD-spacebar).
+
+TextMate does not handle .rtf files, so old source files may need copy-and-pasting into TextMate, or otherwise converting to plain text.
 
 
 CREDITS
