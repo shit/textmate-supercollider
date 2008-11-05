@@ -65,7 +65,7 @@
 		<dict>
 			<key>captures</key>
 			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.supercollider</string>
@@ -81,11 +81,6 @@
 				<dict>
 					<key>name</key>
 					<string>entity.name.class.supercollider</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.other.inherited-class.supercollider</string>
 				</dict>
 			</dict>
 			<key>match</key>
@@ -113,7 +108,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>[^a-zA-Z0-9]([A-Z]{1}[a-zA-Z0-9_]*)[^a-zA-Z0-9_]</string>
+			<string>[^a-zA-Z0-9]([A-Z_]{1}[a-zA-Z0-9_]*)[^a-zA-Z0-9_]</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -132,6 +127,18 @@
 			<string>\|[a-zA-Z0-9\_\=\.\(\)[[:space:]]\,]+\|</string>
 			<key>name</key>
 			<string>variable.parameter.function.supercollider</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.supercollider</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>[^0-9a-zA-Z](\-*[0-9]+\.*[0-9+]*)[^0-9]</string>
 		</dict>
 		<dict>
 			<key>match</key>
