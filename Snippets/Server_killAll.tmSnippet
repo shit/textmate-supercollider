@@ -3,15 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>Routine {
-	
-	${1:1.wait}
-};</string>
+	<string>Server.killAll; Server.default.boot</string>
 	<key>name</key>
-	<string>Routine</string>
+	<string>Server.killAll</string>
 	<key>tabTrigger</key>
-	<string>rout</string>
+	<string>sk</string>
 	<key>uuid</key>
-	<string>60CB2E7D-7CB0-478E-89D8-0D1EDB28B729</string>
+	<string>C0B1536B-6B8C-4803-A81C-542575112AEA</string>
 </dict>
 </plist>

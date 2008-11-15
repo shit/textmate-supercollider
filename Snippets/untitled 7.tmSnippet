@@ -3,15 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>Routine {
-	
-	${1:1.wait}
-};</string>
+	<string>doneAction: ${1:2}$2</string>
 	<key>name</key>
-	<string>Routine</string>
+	<string>doneAction</string>
 	<key>tabTrigger</key>
-	<string>rout</string>
+	<string>da</string>
 	<key>uuid</key>
-	<string>60CB2E7D-7CB0-478E-89D8-0D1EDB28B729</string>
+	<string>EEDC65AF-1F53-4E2F-AA08-D1E04FAC5B1D</string>
 </dict>
 </plist>

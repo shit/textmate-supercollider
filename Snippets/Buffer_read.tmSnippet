@@ -3,15 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>Routine {
-	
-	${1:1.wait}
-};</string>
+	<string>Buffer.read(${1:s}, "${2:sounds/Amen.wav}");</string>
 	<key>name</key>
-	<string>Routine</string>
+	<string>Buffer.read</string>
 	<key>tabTrigger</key>
-	<string>rout</string>
+	<string>buf</string>
 	<key>uuid</key>
-	<string>60CB2E7D-7CB0-478E-89D8-0D1EDB28B729</string>
+	<string>7BF22058-5A13-443D-9809-BD68A75EAFB3</string>
 </dict>
 </plist>

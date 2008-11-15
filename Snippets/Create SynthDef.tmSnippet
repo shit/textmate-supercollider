@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>SynthDef(\\${1:foobar}, { |${2:args}|
+	<string>SynthDef(\\${1:foobar}, { |${2:out=0}$3|
 	$0
 }).play(s);</string>
 	<key>name</key>

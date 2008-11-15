@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+file = File.open("/tmp/sctm-helprq.tmp", "w");
+file.puts ENV['TM_SELECTED_TEXT']
+file.close
+
+%x{
+osascript &lt;&lt; ENDOSA
+tell application "SuperCollider" to activate
+menu_click({"SuperCollider", "Lang", "Compile Library"})
+tell application "TextMate" to activate
+
+-- `menu_click`, by Jacob Rus, September 2006
+on menu_click(mList)
+	local appName, topMenu, r
+	
+	-- Validate our input
+	if mList's length &lt; 3 then error "Menu list is not long enough"
+	
+	-- Set these variables for clarity and brevity later on
+	set {appName, topMenu} to (items 1 through 2 of mList)
+	set r to (items 3 through (mList's length) of mList)
+	
+	-- This overly-long line calls the menu_recurse function with
+	-- two arguments: r, and a reference to the top-level menu
+	tell application "System Events" to my menu_click_recurse(r, ((process appName)'s ¬
+		(menu bar 1)'s (menu bar item topMenu)'s (menu topMenu)))
+end menu_click
+
+on menu_click_recurse(mList, parentObject)
+	local f, r
+	
+	-- `f` = first item, `r` = rest of items
+	set f to item 1 of mList
+	if mList's length &gt; 1 then set r to (items 2 through (mList's length) of mList)
+	
+	-- either actually click the menu item, or recurse again
+	tell application "System Events"
+		if mList's length is 1 then
+			click parentObject's menu item f
+		else
+			my menu_click_recurse(r, (parentObject's (menu item f)'s (menu f)))
+		end if
+	end tell
+end menu_click_recurse
+ENDOSA
+}</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Open help file in TextMate</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>D6DA151A-4ED7-485C-AFA2-26FBF1E0D579</string>
+</dict>
+</plist>

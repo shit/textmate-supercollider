@@ -3,15 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>Routine {
-	
-	${1:1.wait}
-};</string>
+	<string>EnvGen.kr(${1:env}, doneAction: ${2:2})</string>
 	<key>name</key>
-	<string>Routine</string>
+	<string>EnvGen.kr</string>
 	<key>tabTrigger</key>
-	<string>rout</string>
+	<string>egen</string>
 	<key>uuid</key>
-	<string>60CB2E7D-7CB0-478E-89D8-0D1EDB28B729</string>
+	<string>F70E5246-BA0F-4201-8C63-09D8CE38A690</string>
 </dict>
 </plist>
